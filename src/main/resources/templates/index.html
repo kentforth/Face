@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact List</title>
+        <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" defer src="js/main.js"></script>
+
+    </head>
+    <body>
+        <div align="center">
+            <h1>Contact List</h1>
+            <br>
+            <table class="content-table" id="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>TOWN</th>
+                        <th>CONTACT</th>
+                        <th>BIRTHDAY</th>
+                        <th>DESCRIPTION</th>
+                        <th>POST INDEX</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="contact: ${listContacts}">
+                        <td th:text="${contact.id}">ID</td>
+                        <td th:text="${contact.name}">NAME</td>
+                        <td th:text="${contact.town}">TOWN</td>
+                        <td th:text="${contact.contacts}">CONTACT</td>
+                        <td th:text="${contact.birthday}">BIRTHDAY</td>
+                        <td th:text="${contact.description}">DESRIPTION</td>
+                        <td th:text="${contact.postIndex}">POST INDEX</td>
+
+                        <td>
+                            <a th:href="@{'/face/' + ${contact.id}}" class="view" target="_blank">
+                                <button class="btn btn-primary"><i class="fa fa-eye"> View</i></button>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--MODAL WINDOW-->
+
+        </div>
+    </body>
+</html>

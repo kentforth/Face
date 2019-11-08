@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>View Face</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" defer src="/js/main.js"></script>
+    </head>
+    <body class="body">
+
+        <div align="center" class="center-block">
+            <div class="image">
+                <img src="/img/user info.png" alt="" >
+            </div>
+            <div class="grid">
+
+                <div th:object="${contact}" class="container">
+                    <p for="name" class="label">Имя:</p>
+                </div>
+                <div th:object="${contact}" class="container">
+                    <p id="name" th:text="*{name}" class="fieldValue"></p>
+                </div>
+
+                <div th:object="${contact}" class="container">
+                    <p for="town" class="label">Город:</p>
+                </div>
+                <div th:object="${contact}" class="container">
+                    <p id="town" th:text="*{town}" class="fieldValue"></p>
+                </div>
+
+                <div th:object="${contact}" class="container">
+                    <p for="idType" class="label">Лицо:</p>
+                </div>
+                <div th:object="${contact}" class="container">
+                    <p id="idType" th:text="*{idType}" class="fieldValue"></p>
+                </div>
+
+                <div th:object="${contact}" class="container">
+                    <p for="post" class="label">Пост:</p>
+                </div>
+                <div th:object="${contact}" class="container">
+                    <p id="post" th:text="*{post}" class="fieldValue"></p>
+                </div>
+
+                <div th:object="${contact}" class="container">
+                    <p for="birthday" class="label">День рождения:</p>
+                </div>
+                <div th:object="${contact}" class="container">
+                    <p id="birthday" th:text="*{birthday}" class="fieldValue"></p>
+                </div>
+
+                <div th:object="${contact}" class="container">
+                    <p for="contacts" class="label">Контакты:</p>
+                </div>
+                <div th:object="${contact}" class="container">
+                    <p id="contacts" th:text="*{contacts}" class="fieldValue"></p>
+                </div>
+
+                <div th:object="${contact}" class="container">
+                    <p for="description" class="label">Описание:</p>
+                </div>
+                <div th:object="${contact}" class="container">
+                    <p id="description" th:text="*{description}" class="fieldValue"></p>
+                </div>
+
+                <div th:object="${contact}" class="container">
+                    <p for="family" class="label">Семья:</p>
+                </div>
+                <div th:object="${contact}" class="container">
+                    <p id="family" th:text="*{family}" class="fieldValue"></p>
+                </div>
+
+                <div th:object="${contact}" class="container">
+                    <p for="post_index" class="label">Почтовый индекс:</p>
+                </div>
+                <div th:object="${contact}" class="container">
+                    <p id="post_index" th:text="*{postIndex}" class="fieldValue"></p>
+                </div>
+
+                <div th:object="${contact}" class="container">
+                    <p for="itn" class="label">ИНН:</p>
+                </div>
+                <div th:object="${contact}" class="container">
+                    <p id="itn" th:text="*{itn}" class="fieldValue"></p>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>
